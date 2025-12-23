@@ -1,9 +1,10 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import type { Metadata } from "next";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Users, Award, Target, Eye, Heart } from "lucide-react";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Giới Thiệu",
   description: "Công ty Xây dựng Tín Phát với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng dân dụng, thương mại và công nghiệp. Đội ngũ chuyên nghiệp, quy trình thi công khoa học, cam kết chất lượng và tiến độ.",
   keywords: "giới thiệu công ty xây dựng, về chúng tôi, Tín Phát construction, công ty xây dựng TP.HCM",
@@ -145,13 +146,15 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="border-none shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="w-8 h-8 text-accent" />
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 my-4">
+                    <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <value.icon className="w-8 h-8 text-accent" />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {value.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">
-                    {value.title}
-                  </h3>
                   <p className="text-muted-foreground leading-relaxed">
                     {value.description}
                   </p>
@@ -197,7 +200,7 @@ export default function AboutPage() {
             {services.map((service, index) => (
               <Card key={index} className="border-none shadow-lg">
                 <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-foreground mb-6">
+                  <h3 className="text-xl font-bold text-foreground my-6">
                     {service.title}
                   </h3>
                   <ul className="space-y-3">

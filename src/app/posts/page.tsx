@@ -1,11 +1,12 @@
+import type { Metadata } from "next";
 import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { formatDate } from '@/lib/utils'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tin Tức & Hoạt Động",
   description: "Cập nhật tin tức, dự án mới, kiến thức xây dựng và hoạt động của Công ty Xây dựng Tín Phát. Tin tức xây dựng TP.HCM, xu hướng ngành xây dựng 2024.",
   keywords: "tin tức xây dựng, tin tức ngành xây dựng, blog xây dựng, kiến thức xây dựng, dự án mới, hoạt động công ty",
@@ -20,7 +21,6 @@ export const metadata = {
   },
 };
 
-// Mock data - sau này sẽ lấy từ database
 const mockPosts = [
   {
     id: '1',

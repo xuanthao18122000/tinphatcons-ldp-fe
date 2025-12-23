@@ -47,18 +47,18 @@ const social = [
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-background">
+    <footer className="text-foreground border-t border-border bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center">
-                <span className="text-accent font-bold text-xl">T</span>
+              <div className="w-10 h-10 bg-background rounded-lg flex items-center justify-center border border-border">
+                <span className="text-[#1569b7] font-bold text-xl">T</span>
               </div>
               <span className="text-xl font-bold">Tín Phát</span>
             </div>
-            <p className="text-background/80 mb-6">
+            <p className="text-muted-foreground mb-6">
               Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM.
             </p>
             <div className="flex space-x-3">
@@ -68,10 +68,10 @@ export const Footer = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-background/10 hover:bg-accent rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-10 h-10 bg-background hover:bg-[#1569b7] rounded-lg flex items-center justify-center border border-border transition-colors duration-200"
                   aria-label={item.name}
                 >
-                  <item.icon className="w-5 h-5" />
+                  <item.icon className="w-5 h-5 text-[#1569b7]" />
                 </a>
               ))}
             </div>
@@ -85,7 +85,7 @@ export const Footer = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-background/80 hover:text-accent transition-colors text-sm"
+                    className="text-muted-foreground hover:text-[#1569b7] transition-colors text-sm"
                   >
                     {item.name}
                   </a>
@@ -102,7 +102,7 @@ export const Footer = () => {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-background/80 hover:text-accent transition-colors text-sm"
+                    className="text-muted-foreground hover:text-[#1569b7] transition-colors text-sm"
                   >
                     {item.name}
                   </a>
@@ -117,15 +117,15 @@ export const Footer = () => {
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <info.icon className="w-4 h-4 text-accent" />
+                  <div className="w-8 h-8 bg-background rounded-lg flex items-center justify-center shrink-0 mt-0.5 border border-border">
+                    <info.icon className="w-4 h-4 text-[#1569b7]" />
                   </div>
                   <div>
-                    <p className="text-xs text-background/60 mb-1">{info.title}</p>
+                    <p className="text-xs text-muted-foreground mb-1">{info.title}</p>
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-sm text-background/90 hover:text-accent transition-colors"
+                        className="text-sm text-foreground hover:text-[#1569b7] transition-colors"
                       >
                         {info.content}
                       </a>
@@ -140,16 +140,16 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-background/20">
+        <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-background/60 text-sm">
+            <p className="text-muted-foreground text-sm">
               © {new Date().getFullYear()} Công ty Xây dựng Tín Phát. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-accent transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
                 Chính Sách Bảo Mật
               </a>
-              <a href="#" className="text-background/60 hover:text-accent transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
                 Điều Khoản Dịch Vụ
               </a>
             </div>

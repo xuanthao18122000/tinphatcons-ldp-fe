@@ -1,9 +1,10 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import type { Metadata } from "next";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Dự Án",
   description: "Khám phá 100+ dự án xây dựng đã hoàn thành của Tín Phát: biệt thự, nhà phố, nhà xưởng, văn phòng, khu dân cư. Uy tín - Chất lượng - Đúng tiến độ.",
   keywords: "dự án xây dựng, công trình đã hoàn thành, portfolio xây dựng, dự án biệt thự, dự án nhà xưởng, xây dựng TP.HCM",
