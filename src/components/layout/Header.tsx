@@ -1,6 +1,10 @@
+"use client";
+
 import { ScrollHeader } from "@/components/layout/ScrollHeader";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ChevronDown, Mail, Search } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "TRANG CHỦ", href: "/" },
@@ -11,6 +15,8 @@ const navigation = [
 ];
 
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <ScrollHeader>
       <div className="container mx-auto px-4">
@@ -18,56 +24,55 @@ export const Header = () => {
           {/* Logo */}
           <a
             href="/"
-            className="flex items-center gap-3"
-            aria-label="Công ty Xây dựng Tín Phát - Trang chủ"
+            className="flex items-center"
+            aria-label="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT - Trang chủ"
           >
-            <div className="h-12 w-12 rounded-sm border-2 border-[#1569b7] flex items-center justify-center bg-white shadow-sm">
-              <span className="text-[#1569b7] font-black text-lg">TP</span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-xs font-semibold tracking-[0.18em] text-[#1569b7]">
-                TIN PHAT CONS
-              </div>
-            </div>
+            <img
+              src="/logo-ngang.png"
+              alt="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT"
+              className="h-12 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-semibold tracking-[0.02em] uppercase text-foreground hover:text-[#1569b7] transition-colors"
-              >
-                {item.name}
-              </a>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href || 
+                (item.href !== "/" && pathname.startsWith(item.href));
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={cn(
+                    "text-sm font-semibold tracking-[0.02em] uppercase transition-colors",
+                    isActive
+                      ? "text-[#1569b7] border-b-2 border-[#1569b7] pb-1"
+                      : "text-foreground hover:text-[#1569b7]"
+                  )}
+                >
+                  {item.name}
+                </a>
+              );
+            })}
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
-            <button
-              type="button"
-              className="flex items-center gap-1 text-sm font-semibold text-foreground hover:text-[#1569b7] transition-colors"
-            >
-              <span>VN</span>
-              <ChevronDown size={16} aria-hidden="true" />
-            </button>
             <div className="flex items-center gap-2">
               <a
-                href="mailto:info@tinphatcons.vn"
+                href="mailto:congtytinphatvungtau@gmail.com"
                 className="h-10 w-10 rounded-full bg-[#b10000] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
                 aria-label="Liên hệ email"
               >
                 <Mail size={18} aria-hidden="true" />
               </a>
-              <a
+              {/* <a
                 href="/#search"
                 className="h-10 w-10 rounded-full bg-[#1569b7] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
                 aria-label="Tìm kiếm"
               >
                 <Search size={18} aria-hidden="true" />
-              </a>
+              </a> */}
             </div>
           </div>
 

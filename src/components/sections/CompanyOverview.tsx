@@ -10,7 +10,7 @@ export const CompanyOverview = () => {
         {/* Đoạn mô tả ngắn */}
         <div className="max-w-3xl mx-auto mb-10 text-center text-sm md:text-base text-muted-foreground">
           <p>
-            Hơn 20 năm hình thành và phát triển, Công ty Xây dựng Tín Phát đã không ngừng vươn mình mạnh mẽ,
+            Hơn 20 năm hình thành và phát triển, CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT đã không ngừng vươn mình mạnh mẽ,
             từng bước khẳng định vị thế là một trong những tổng thầu xây dựng hàng đầu tại Việt Nam.
           </p>
         </div>
@@ -62,7 +62,7 @@ export const CompanyOverview = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <a
-                href="/about"
+                href="/capabilities"
                 className="inline-flex items-center justify-center px-6 h-10 rounded-full text-sm font-semibold text-[#1569b7] border border-[#1569b7] hover:bg-[#1569b7] hover:text-white transition-colors"
               >
                 Xem thêm

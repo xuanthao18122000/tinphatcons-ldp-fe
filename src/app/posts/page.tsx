@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: "Cập nhật tin tức, dự án mới, kiến thức xây dựng và hoạt động của Công ty Xây dựng Tín Phát. Tin tức xây dựng TP.HCM, xu hướng ngành xây dựng 2024.",
   keywords: "tin tức xây dựng, tin tức ngành xây dựng, blog xây dựng, kiến thức xây dựng, dự án mới, hoạt động công ty",
   alternates: {
-    canonical: "https://tinphatcons.vn/posts",
+    canonical: "https://tinphatcons.com/posts",
   },
   openGraph: {
     title: "Tin Tức & Hoạt Động | Công ty Xây dựng Tín Phát",
     description: "Cập nhật tin tức mới nhất về các dự án và hoạt động của Tín Phát",
-    url: "https://tinphatcons.vn/posts",
+    url: "https://tinphatcons.com/posts",
     images: ["/og-image.jpg"],
   },
 };

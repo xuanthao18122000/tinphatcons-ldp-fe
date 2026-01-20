@@ -19,19 +19,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Điện Thoại",
-    content: "+84 (028) 123-4567",
-    link: "tel:+842812 34567",
+    content: "0326 702 600",
+    link: "tel:0326702600",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "info@tinphat.vn",
-    link: "mailto:info@tinphat.vn",
+    content: "congtytinphatvungtau@gmail.com",
+    link: "mailto:congtytinphatvungtau@gmail.com",
   },
   {
     icon: MapPin,
     title: "Địa Chỉ",
-    content: "TP. Hồ Chí Minh",
+    content: "106 Nam Kỳ Khởi Nghĩa, phường Vũng Tàu, thành phố Hồ Chí Minh",
   },
   {
     icon: Clock,
@@ -52,11 +52,12 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-background rounded-lg flex items-center justify-center border border-border">
-                <span className="text-[#1569b7] font-bold text-xl">T</span>
-              </div>
-              <span className="text-xl font-bold">Tín Phát</span>
+            <div className="mb-4">
+              <img
+                src="/logo-ngang.png"
+                alt="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT"
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <p className="text-muted-foreground mb-6">
               Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM.
@@ -130,7 +131,7 @@ export const Footer = () => {
                         {info.content}
                       </a>
                     ) : (
-                      <p className="text-sm text-background/90">{info.content}</p>
+                      <p className="text-sm text-foreground">{info.content}</p>
                     )}
                   </div>
                 </li>
@@ -141,17 +142,27 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Công ty Xây dựng Tín Phát. All rights reserved.
-            </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
-                Chính Sách Bảo Mật
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
-                Điều Khoản Dịch Vụ
-              </a>
+          <div className="flex flex-col space-y-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+              <div className="flex flex-col space-y-1">
+                <p className="text-muted-foreground text-sm">
+                  © {new Date().getFullYear()} CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT. All rights reserved.
+                </p>
+                <p className="text-muted-foreground text-xs">
+                  Tên giao dịch: TIN PHAT CTI CO., LTD
+                </p>
+                <p className="text-muted-foreground text-xs">
+                  Mã số thuế: 3502302391 | Vốn điều lệ: 3.000.000.000 VNĐ
+                </p>
+              </div>
+              <div className="flex space-x-6 text-sm">
+                <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
+                  Chính Sách Bảo Mật
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-[#1569b7] transition-colors">
+                  Điều Khoản Dịch Vụ
+                </a>
+              </div>
             </div>
           </div>
         </div>

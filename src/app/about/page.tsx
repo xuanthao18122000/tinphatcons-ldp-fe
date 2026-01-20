@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle2, Users, Award, Target, Eye, Heart } from "lucide-react";
+import { CheckCircle2, Users, Award, Target, Eye, Heart, Building2, Mail, Phone, Globe, MapPin, FileText, DollarSign } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Giới Thiệu",
   description: "Công ty Xây dựng Tín Phát với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng dân dụng, thương mại và công nghiệp. Đội ngũ chuyên nghiệp, quy trình thi công khoa học, cam kết chất lượng và tiến độ.",
   keywords: "giới thiệu công ty xây dựng, về chúng tôi, Tín Phát construction, công ty xây dựng TP.HCM",
   alternates: {
-    canonical: "https://tinphatcons.vn/about",
+    canonical: "https://tinphatcons.com/about",
   },
   openGraph: {
     title: "Giới Thiệu | Công ty Xây dựng Tín Phát",
     description: "Tìm hiểu về Công ty Xây dựng Tín Phát - Hơn 10 năm kinh nghiệm, 100+ dự án hoàn thành",
-    url: "https://tinphatcons.vn/about",
+    url: "https://tinphatcons.com/about",
     images: ["/og-image.jpg"],
   },
 };
@@ -87,20 +87,229 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
-      <header className="pt-32 pb-16 bg-gradient-to-b from-primary/10 to-background">
+
+      {/* Company Information Section */}
+      <section className="pt-32 py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Giới Thiệu Công Ty Xây Dựng Tín Phát
-            </h1>
-            <p className="text-muted-foreground text-lg">
-              Đối tác tin cậy với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng tại TP.HCM
-            </p>
+          <div className="max-w-7xl mx-auto">
+            {/* Title */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1569b7] mb-3">
+                THÔNG TIN CÔNG TY
+              </h2>
+              <p className="text-xl md:text-2xl font-bold text-[#b10000] mb-4">Company Information</p>
+              <div className="h-1 w-24 bg-[#b10000] mx-auto"></div>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+              {/* Company Information List */}
+              <div className="space-y-6">
+                {/* Company Name */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <Building2 className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Tên Công Ty / Company name
+                    </p>
+                    <p className="text-base font-bold text-foreground leading-tight mb-1">
+                      CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      TIN PHAT CONSTRUCTION TRADING INVESTMENT COMPANY LIMITED
+                    </p>
+                  </div>
+                </div>
+
+                {/* Short Name */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <FileText className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Tên Viết Tắt / Short name
+                    </p>
+                    <p className="text-base font-bold text-foreground">TIN PHAT CTI CO., LTD</p>
+                  </div>
+                </div>
+
+                {/* Trade Name */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <FileText className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Tên Giao Dịch / Trade name
+                    </p>
+                    <p className="text-base font-bold text-foreground">TIN PHAT CTI CO., LTD</p>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <MapPin className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Trụ Sở Chính / Main office
+                    </p>
+                    <p className="text-base font-semibold text-foreground mb-1">
+                      106 Nam Kỳ Khởi Nghĩa, phường Vũng Tàu, thành phố Hồ Chí Minh
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      106 Nam Ky Khoi Nghia, Vung Tau Ward, Ho Chi Minh City
+                    </p>
+                  </div>
+                </div>
+
+                {/* Hotline */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#b10000]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <Phone className="w-5 h-5 text-[#b10000]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Hotline
+                    </p>
+                    <a href="tel:0326702600" className="text-lg font-bold text-[#1569b7] hover:text-[#b10000] transition-colors">
+                      0326 702 600
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <Mail className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Email
+                    </p>
+                    <a href="mailto:congtytinphatvungtau@gmail.com" className="text-base font-semibold text-[#1569b7] hover:text-[#b10000] transition-colors break-all">
+                      congtytinphatvungtau@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Website */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <Globe className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Website
+                    </p>
+                    <a href="https://tinphatcons.com" target="_blank" rel="noopener noreferrer" className="text-base font-semibold text-[#1569b7] hover:text-[#b10000] transition-colors">
+                      https://tinphatcons.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Tax Code */}
+                <div className="flex items-start gap-4 pb-3 border-b border-border">
+                  <div className="w-10 h-10 bg-[#1569b7]/10 rounded-lg flex items-center justify-center shrink-0">
+                    <FileText className="w-5 h-5 text-[#1569b7]" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-2">
+                      Mã Số Thuế / Tax code
+                    </p>
+                    <p className="text-lg font-bold text-foreground">3502302391</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative">
+                <div className="sticky top-24">
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img
+                      src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=1200&fit=crop"
+                      alt="Công trình xây dựng hiện đại của Công ty Tín Phát"
+                      className="w-full h-[600px] md:h-[700px] object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </section>
+
+      {/* Open Letter Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Title */}
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1569b7] mb-2">
+                THƯ NGỎ
+              </h2>
+              <p className="text-xl font-bold text-[#b10000] mb-6">Open Letter</p>
+              <div className="h-1 w-20 bg-[#b10000] mb-8"></div>
+            </div>
+
+            {/* Greeting */}
+            <p className="text-foreground text-lg mb-8">
+              Kính gửi: Quý Đối Tác – Quý Khách Hàng
+            </p>
+
+            {/* Logo */}
+            <div className="flex justify-center mb-8">
+              <img
+                src="/logo-ngang.png"
+                alt="CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+
+            {/* Vietnamese Content */}
+            <div className="space-y-4 mb-8 text-foreground leading-relaxed">
+              <p>
+                <strong>CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT</strong> xin gửi đến Quý Đối Tác, 
+                Quý Khách Hàng lời chúc sức khỏe, thành công và thịnh vượng.
+              </p>
+              <p>
+                Với định hướng phát triển bền vững, chúng tôi cam kết mang đến những giải pháp xây dựng 
+                chất lượng cao, đáp ứng mọi nhu cầu về đầu tư, thương mại, hoàn thiện dự án và giải pháp 
+                kỹ thuật trên toàn quốc. Với phương châm hoạt động <strong>"Uy tín - Chất lượng - Tiến bộ"</strong>, 
+                chúng tôi tự hào về đội ngũ kỹ sư, kỹ thuật viên giàu kinh nghiệm, quy trình làm việc chuyên nghiệp 
+                và năng lực thi công mạnh mẽ.
+              </p>
+              <p>
+                Mỗi công trình của chúng tôi đều thể hiện cam kết về chất lượng, an toàn và giá trị bền vững 
+                cho khách hàng. Chúng tôi mong muốn trở thành đối tác tin cậy, sẵn sàng đồng hành cùng Quý khách 
+                hàng trong tất cả các giai đoạn của dự án, từ tư vấn, thiết kế đến thi công, bàn giao và bảo trì 
+                dài hạn.
+              </p>
+              <p>
+                Chúng tôi rất mong nhận được sự tin tưởng, hợp tác và đồng hành của Quý Đối Tác, Quý Khách Hàng 
+                trong thời gian tới.
+              </p>
+            </div>
+
+            {/* Closing */}
+            <div className="mt-12 space-y-4">
+              <p className="text-foreground text-lg">Trân trọng kính chào!</p>
+              <p className="text-foreground font-semibold">
+                CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT
+              </p>
+              <div className="mt-8">
+                <p className="text-foreground mb-2">Giám Đốc</p>
+                <p className="text-foreground font-semibold text-lg">Bùi Đức Hùng</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Company Overview */}
       <section className="py-16 bg-background" aria-labelledby="company-overview">

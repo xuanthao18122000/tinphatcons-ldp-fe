@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Công ty Xây dựng Tín Phát',
-    short_name: 'Tín Phát',
-    description: 'Công ty Xây dựng Tín Phát - Đối tác tin cậy cho các dự án xây dựng tại TP.HCM',
+    name: 'CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT',
+    short_name: 'TIN PHAT CTI',
+    description: 'CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT - Đối tác tin cậy cho các dự án xây dựng tại TP.HCM',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   description: "Năng lực thi công của Công ty Xây dựng Tín Phát - Chuyên nghiệp với hơn 10 năm kinh nghiệm, đội ngũ kỹ sư giàu kinh nghiệm, máy móc thiết bị hiện đại, quy trình thi công khoa học đảm bảo chất lượng và tiến độ công trình.",
   keywords: "năng lực thi công, năng lực xây dựng, chứng chỉ xây dựng, máy móc thi công, đội ngũ xây dựng, quy trình thi công, Tín Phát",
   alternates: {
-    canonical: "https://tinphatcons.vn/capabilities",
+    canonical: "https://tinphatcons.com/capabilities",
   },
   openGraph: {
     title: "Năng Lực Thi Công | Công ty Xây dựng Tín Phát",
     description: "Tìm hiểu về năng lực thi công chuyên nghiệp của Công ty Xây dựng Tín Phát",
-    url: "https://tinphatcons.vn/capabilities",
+    url: "https://tinphatcons.com/capabilities",
     images: ["/og-image.jpg"],
   },
 };
