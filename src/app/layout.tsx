@@ -60,6 +60,10 @@ export const metadata: Metadata = {
     // Thêm sau khi có Google Search Console
     // google: 'google-verification-code',
   },
+  icons: {
+    icon: "/logo-doc.png",
+    apple: "/logo-doc.png",
+  },
 };
 
 export default function RootLayout({
