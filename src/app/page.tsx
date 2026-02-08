@@ -10,15 +10,15 @@ import { News } from "@/components/sections/News";
 import { FeaturedClients } from "@/components/sections/FeaturedClients";
 
 export const metadata: Metadata = {
-  title: "Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM",
-  description: "Công ty Xây dựng Tín Phát - Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM. ✓ Chất lượng ✓ Uy tín ✓ Đúng tiến độ. Liên hệ ngay để được tư vấn miễn phí!",
-  keywords: "xây dựng, công ty xây dựng, thi công xây dựng, nhà thầu xây dựng, xây nhà trọn gói, xây biệt thự, xây nhà xưởng, xây dựng dân dụng, xây dựng công nghiệp, TP.HCM",
+  title: "Tín Phát Construction | Công ty Xây dựng Tín Phát - Xây dựng Uy Tín TP.HCM",
+  description: "Tín Phát Construction - Tin Phat Construction. Công ty Xây dựng Tín Phát - Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM. ✓ Chất lượng ✓ Uy tín ✓ Đúng tiến độ. Liên hệ ngay để được tư vấn miễn phí!",
+  keywords: "Tín Phát Construction, Tin Phat Construction, Tín Phát Construction Company, Công ty Xây dựng Tín Phát, xây dựng, công ty xây dựng, thi công xây dựng, nhà thầu xây dựng, xây nhà trọn gói, xây biệt thự, xây nhà xưởng, xây dựng dân dụng, xây dựng công nghiệp, TP.HCM",
   alternates: {
     canonical: "https://tinphatcons.com",
   },
   openGraph: {
-    title: "Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM",
-    description: "Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM",
+    title: "Tín Phát Construction | Công ty Xây dựng Tín Phát - Xây dựng Uy Tín TP.HCM",
+    description: "Tín Phát Construction - Tin Phat Construction. Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM",
     type: "website",
     url: "https://tinphatcons.com",
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Công ty Xây dựng Tín Phát",
+        alt: "Tín Phát Construction - Công ty Xây dựng Tín Phát",
       },
     ],
   },

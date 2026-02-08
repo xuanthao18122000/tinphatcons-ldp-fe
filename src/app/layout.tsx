@@ -10,11 +10,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://tinphatcons.com'),
   title: {
-    default: "Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM",
-    template: "%s | Công ty Xây dựng Tín Phát",
+    default: "Tín Phát Construction | Công ty Xây dựng Tín Phát - Xây dựng Uy Tín TP.HCM",
+    template: "%s | Tín Phát Construction",
   },
-  description: "Công ty Xây dựng Tín Phát - Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM. Đội ngũ chuyên nghiệp, uy tín, đúng tiến độ.",
-  keywords: ["xây dựng", "công ty xây dựng", "thi công xây dựng", "nhà thầu", "xây nhà", "biệt thự", "nhà xưởng", "TP.HCM", "Tín Phát", "xây dựng dân dụng", "xây dựng công nghiệp"],
+  description: "Tín Phát Construction - Công ty Xây dựng Tín Phát. Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM. Tin Phat Construction, uy tín, đúng tiến độ.",
+  keywords: ["Tín Phát Construction", "Tin Phat Construction", "Tín Phát Construction Company", "Công ty Xây dựng Tín Phát", "xây dựng", "công ty xây dựng", "thi công xây dựng", "nhà thầu", "xây nhà", "biệt thự", "nhà xưởng", "TP.HCM", "Tín Phát", "xây dựng dân dụng", "xây dựng công nghiệp"],
   authors: [{ name: "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT" }],
   creator: "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT",
   publisher: "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://tinphatcons.com',
-    siteName: 'CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT',
-    title: 'Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM',
-    description: 'Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
+    siteName: 'Tín Phát Construction - CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT',
+    title: 'Tín Phát Construction | Công ty Xây dựng Tín Phát - Xây dựng Uy Tín TP.HCM',
+    description: 'Tín Phát Construction - Tin Phat Construction. Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
     images: [
       {
         url: '/og-image.jpg',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM',
-    description: 'Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
+    title: 'Tín Phát Construction | Công ty Xây dựng Tín Phát - Xây dựng Uy Tín TP.HCM',
+    description: 'Tín Phát Construction - Tin Phat Construction. Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -75,10 +75,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT",
-    "alternateName": "TIN PHAT CTI CO., LTD",
+    "alternateName": ["Tín Phát Construction", "Tin Phat Construction", "TIN PHAT CTI CO., LTD"],
     "url": "https://tinphatcons.com",
     "logo": "https://tinphatcons.com/logo-ngang.png",
-    "description": "CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT - Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM",
+    "description": "Tín Phát Construction - Tin Phat Construction. CÔNG TY TNHH ĐẦU TƯ XÂY DỰNG THƯƠNG MẠI TÍN PHÁT - Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "106 Nam Kỳ Khởi Nghĩa, phường Vũng Tàu",

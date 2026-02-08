@@ -6,14 +6,14 @@ import { CheckCircle2, Users, Award, Target, Eye, Heart, Building2, Mail, Phone,
 
 export const metadata: Metadata = {
   title: "Giới Thiệu",
-  description: "Công ty Xây dựng Tín Phát với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng dân dụng, thương mại và công nghiệp. Đội ngũ chuyên nghiệp, quy trình thi công khoa học, cam kết chất lượng và tiến độ.",
-  keywords: "giới thiệu công ty xây dựng, về chúng tôi, Tín Phát construction, công ty xây dựng TP.HCM",
+  description: "Tín Phát Construction - Công ty Xây dựng Tín Phát với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng dân dụng, thương mại và công nghiệp. Tin Phat Construction, đội ngũ chuyên nghiệp, cam kết chất lượng và tiến độ.",
+  keywords: "Tín Phát Construction, Tin Phat Construction, giới thiệu Tín Phát Construction, về chúng tôi, Công ty Xây dựng Tín Phát, công ty xây dựng TP.HCM",
   alternates: {
     canonical: "https://tinphatcons.com/about",
   },
   openGraph: {
-    title: "Giới Thiệu | Công ty Xây dựng Tín Phát",
-    description: "Tìm hiểu về Công ty Xây dựng Tín Phát - Hơn 10 năm kinh nghiệm, 100+ dự án hoàn thành",
+    title: "Giới Thiệu | Tín Phát Construction - Công ty Xây dựng Tín Phát",
+    description: "Tín Phát Construction - Tin Phat Construction. Tìm hiểu về Công ty Xây dựng Tín Phát - Hơn 10 năm kinh nghiệm, 100+ dự án hoàn thành",
     url: "https://tinphatcons.com/about",
     images: ["/og-image.jpg"],
   },

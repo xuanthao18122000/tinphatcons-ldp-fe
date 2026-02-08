@@ -22,14 +22,14 @@ import {
 
 export const metadata: Metadata = {
   title: "Năng Lực Thi Công",
-  description: "Năng lực thi công của Công ty Xây dựng Tín Phát - Chuyên nghiệp với hơn 10 năm kinh nghiệm, đội ngũ kỹ sư giàu kinh nghiệm, máy móc thiết bị hiện đại, quy trình thi công khoa học đảm bảo chất lượng và tiến độ công trình.",
-  keywords: "năng lực thi công, năng lực xây dựng, chứng chỉ xây dựng, máy móc thi công, đội ngũ xây dựng, quy trình thi công, Tín Phát",
+  description: "Tín Phát Construction - Năng lực thi công của Công ty Xây dựng Tín Phát. Tin Phat Construction chuyên nghiệp với hơn 10 năm kinh nghiệm, đội ngũ kỹ sư giàu kinh nghiệm, máy móc thiết bị hiện đại, quy trình thi công khoa học đảm bảo chất lượng và tiến độ công trình.",
+  keywords: "Tín Phát Construction, Tin Phat Construction, năng lực thi công Tín Phát Construction, năng lực xây dựng, chứng chỉ xây dựng, máy móc thi công, đội ngũ xây dựng, quy trình thi công, Công ty Xây dựng Tín Phát",
   alternates: {
     canonical: "https://tinphatcons.com/capabilities",
   },
   openGraph: {
-    title: "Năng Lực Thi Công | Công ty Xây dựng Tín Phát",
-    description: "Tìm hiểu về năng lực thi công chuyên nghiệp của Công ty Xây dựng Tín Phát",
+    title: "Năng Lực Thi Công | Tín Phát Construction - Công ty Xây dựng Tín Phát",
+    description: "Tín Phát Construction - Tin Phat Construction. Tìm hiểu về năng lực thi công chuyên nghiệp của Công ty Xây dựng Tín Phát",
     url: "https://tinphatcons.com/capabilities",
     images: ["/og-image.jpg"],
   },

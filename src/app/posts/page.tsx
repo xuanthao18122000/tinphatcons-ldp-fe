@@ -8,14 +8,14 @@ import { Footer } from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: "Tin Tức & Hoạt Động",
-  description: "Cập nhật tin tức, dự án mới, kiến thức xây dựng và hoạt động của Công ty Xây dựng Tín Phát. Tin tức xây dựng TP.HCM, xu hướng ngành xây dựng 2024.",
-  keywords: "tin tức xây dựng, tin tức ngành xây dựng, blog xây dựng, kiến thức xây dựng, dự án mới, hoạt động công ty",
+  description: "Tín Phát Construction - Cập nhật tin tức, dự án mới, kiến thức xây dựng và hoạt động của Tin Phat Construction, Công ty Xây dựng Tín Phát. Tin tức xây dựng TP.HCM, xu hướng ngành xây dựng.",
+  keywords: "Tín Phát Construction, Tin Phat Construction, tin tức Tín Phát Construction, tin tức xây dựng, tin tức ngành xây dựng, blog xây dựng, kiến thức xây dựng, dự án mới, Công ty Xây dựng Tín Phát",
   alternates: {
     canonical: "https://tinphatcons.com/posts",
   },
   openGraph: {
-    title: "Tin Tức & Hoạt Động | Công ty Xây dựng Tín Phát",
-    description: "Cập nhật tin tức mới nhất về các dự án và hoạt động của Tín Phát",
+    title: "Tin Tức & Hoạt Động | Tín Phát Construction - Công ty Xây dựng Tín Phát",
+    description: "Tín Phát Construction - Tin Phat Construction. Cập nhật tin tức mới nhất về các dự án và hoạt động",
     url: "https://tinphatcons.com/posts",
     images: ["/og-image.jpg"],
   },

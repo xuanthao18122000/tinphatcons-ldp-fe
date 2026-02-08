@@ -151,12 +151,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: `${post.category}, tin tức xây dựng, dự án xây dựng, Tín Phát`,
+    keywords: `Tín Phát Construction, Tin Phat Construction, ${post.category}, tin tức xây dựng, dự án xây dựng, Công ty Xây dựng Tín Phát`,
     alternates: {
       canonical: `https://tinphatcons.com/posts/${post.slug}`,
     },
     openGraph: {
-      title: `${post.title} | Công ty Xây dựng Tín Phát`,
+      title: `${post.title} | Tín Phát Construction - Công ty Xây dựng Tín Phát`,
       description: post.excerpt,
       url: `https://tinphatcons.com/posts/${post.slug}`,
       images: [post.thumbnail],

@@ -6,14 +6,14 @@ import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: "Dự Án",
-  description: "Khám phá 100+ dự án xây dựng đã hoàn thành của Tín Phát: biệt thự, nhà phố, nhà xưởng, văn phòng, khu dân cư. Uy tín - Chất lượng - Đúng tiến độ.",
-  keywords: "dự án xây dựng, công trình đã hoàn thành, portfolio xây dựng, dự án biệt thự, dự án nhà xưởng, xây dựng TP.HCM",
+  description: "Tín Phát Construction - Khám phá 100+ dự án xây dựng đã hoàn thành của Tin Phat Construction: biệt thự, nhà phố, nhà xưởng, văn phòng, khu dân cư. Uy tín - Chất lượng - Đúng tiến độ.",
+  keywords: "Tín Phát Construction, Tin Phat Construction, dự án Tín Phát Construction, dự án xây dựng, công trình đã hoàn thành, portfolio xây dựng, dự án biệt thự, dự án nhà xưởng, xây dựng TP.HCM",
   alternates: {
     canonical: "https://tinphatcons.com/projects",
   },
   openGraph: {
-    title: "Dự Án | Công ty Xây dựng Tín Phát",
-    description: "Xem 100+ dự án xây dựng đã hoàn thành: biệt thự, nhà xưởng, văn phòng, khu dân cư",
+    title: "Dự Án | Tín Phát Construction - Công ty Xây dựng Tín Phát",
+    description: "Tín Phát Construction - Tin Phat Construction. Xem 100+ dự án xây dựng đã hoàn thành: biệt thự, nhà xưởng, văn phòng, khu dân cư",
     url: "https://tinphatcons.com/projects",
     images: ["/og-image.jpg"],
   },

@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "Không Tìm Thấy Trang",
-  description: "Trang bạn đang tìm kiếm không tồn tại. Vui lòng quay lại trang chủ hoặc sử dụng menu điều hướng để tìm thông tin bạn cần.",
+  description: "Tín Phát Construction - Tin Phat Construction. Trang bạn đang tìm kiếm không tồn tại. Vui lòng quay lại trang chủ Công ty Xây dựng Tín Phát hoặc sử dụng menu điều hướng.",
   robots: {
     index: false,
     follow: false,
