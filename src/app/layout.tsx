@@ -1,54 +1,67 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
+import { siteUrl, siteLogoPath, siteLogoUrl, contactPhone, socialLinks } from "@/config/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700", "900"],
+  subsets: ["vietnamese", "latin"],
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tinphatcons.vn'),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM",
-    template: "%s | Công ty Xây dựng Tín Phát",
+    default: "Ắc quy Trung Nguyên | Ắc quy ô tô - xe máy chính hãng",
+    template: "%s | Ắc quy Trung Nguyên",
   },
-  description: "Công ty Xây dựng Tín Phát - Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM. Đội ngũ chuyên nghiệp, uy tín, đúng tiến độ.",
-  keywords: ["xây dựng", "công ty xây dựng", "thi công xây dựng", "nhà thầu", "xây nhà", "biệt thự", "nhà xưởng", "TP.HCM", "Tín Phát", "xây dựng dân dụng", "xây dựng công nghiệp"],
-  authors: [{ name: "Công ty Xây dựng Tín Phát" }],
-  creator: "Công ty Xây dựng Tín Phát",
-  publisher: "Công ty Xây dựng Tín Phát",
+  description:
+    "Ắc quy Trung Nguyên - Chuyên ắc quy ô tô, ắc quy xe máy chính hãng. ✓ Chất lượng ✓ Giá tốt ✓ Bảo hành. Liên hệ ngay để được tư vấn!",
+  keywords: [
+    "ắc quy",
+    "ắc quy ô tô",
+    "ắc quy xe máy",
+    "pin ắc quy",
+    "Ắc quy Trung Nguyên",
+    "acquytrungnguyen",
+    "ắc quy chính hãng",
+    "TP.HCM",
+  ],
+  authors: [{ name: "Ắc quy Trung Nguyên" }],
+  creator: "Ắc quy Trung Nguyên",
+  publisher: "Ắc quy Trung Nguyên",
+  icons: {
+    icon: siteLogoPath,
+    shortcut: siteLogoPath,
+    apple: siteLogoPath,
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    type: 'website',
-    locale: 'vi_VN',
-    url: 'https://tinphatcons.vn',
-    siteName: 'Công ty Xây dựng Tín Phát',
-    title: 'Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM',
-    description: 'Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
+    type: "website",
+    locale: "vi_VN",
+    url: siteUrl,
+    siteName: "Ắc quy Trung Nguyên",
+    title: "Ắc quy Trung Nguyên | Ắc quy ô tô - xe máy chính hãng",
+    description:
+      "Ắc quy Trung Nguyên - Ắc quy ô tô, xe máy chính hãng. Chất lượng, giá tốt, bảo hành.",
     images: [
       {
-        url: '/og-image.jpg',
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Công ty Xây dựng Tín Phát',
+        alt: "Ắc quy Trung Nguyên",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Công ty Xây dựng Tín Phát | Xây dựng Uy Tín TP.HCM',
-    description: 'Đối tác tin cậy cho các dự án xây dựng dân dụng, thương mại và công nghiệp tại TP.HCM',
-    images: ['/og-image.jpg'],
+    card: "summary_large_image",
+    title: "Ắc quy Trung Nguyên | Ắc quy ô tô - xe máy chính hãng",
+    description: "Ắc quy Trung Nguyên - Ắc quy ô tô, xe máy chính hãng.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -56,13 +69,12 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   verification: {
-    // Thêm sau khi có Google Search Console
     // google: 'google-verification-code',
   },
 };
@@ -75,40 +87,33 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Công ty Xây dựng Tín Phát",
-    "url": "https://tinphatcons.vn",
-    "logo": "https://tinphatcons.vn/logo.png",
-    "description": "Công ty Xây dựng Tín Phát - Chuyên thiết kế và thi công các công trình xây dựng dân dụng, thương mại và công nghiệp chất lượng cao tại TP.HCM",
+    "name": "Ắc quy Trung Nguyên",
+    "url": siteUrl,
+    "logo": siteLogoUrl,
+    "description":
+      "Ắc quy Trung Nguyên - Chuyên ắc quy ô tô, ắc quy xe máy chính hãng. Chất lượng, giá tốt, bảo hành.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "TP. Hồ Chí Minh",
-      "addressCountry": "VN"
+      "addressCountry": "VN",
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+84-28-123-4567",
+      "telephone": contactPhone,
       "contactType": "customer service",
       "areaServed": "VN",
-      "availableLanguage": ["vi"]
+      "availableLanguage": ["vi"],
     },
-    "sameAs": [
-      "https://facebook.com/tinphatcons",
-      "https://www.linkedin.com/company/tinphatcons"
-    ]
+    "sameAs": [socialLinks.facebook, socialLinks.linkedin],
   };
 
   return (
     <html lang="vi" suppressHydrationWarning>
-      <head>
+      <body className={`antialiased ${roboto.variable}`} suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        suppressHydrationWarning
-      >
         {children}
       </body>
     </html>

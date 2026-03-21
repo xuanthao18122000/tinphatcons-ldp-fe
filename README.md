@@ -1,6 +1,6 @@
-# Tín Phát Construction - Landing Page & CMS
+# Ắc quy Trung Nguyên - Landing Page & CMS
 
-Landing page và hệ thống quản lý nội dung cho công ty xây dựng Tín Phát.
+Landing page và hệ thống quản lý nội dung cho Ắc quy Trung Nguyên.
 
 ## 🚀 Tech Stack
 
@@ -232,4 +232,4 @@ Liên hệ: [your-email@example.com]
 
 ---
 
-Made with ❤️ by Tín Phát Construction
+Made with ❤️ by Ắc quy Trung Nguyên

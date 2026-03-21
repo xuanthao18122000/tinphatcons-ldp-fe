@@ -1,4 +1,4 @@
-# SEO Optimization - Công ty Xây dựng Tín Phát
+# SEO Optimization - Ắc quy Trung Nguyên
 
 ## ✅ Đã Thực Hiện
 
@@ -87,7 +87,7 @@ Thêm structured data cho:
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Công ty Xây dựng Tín Phát",
+  "name": "Ắc quy Trung Nguyên",
   "image": "https://tinphatcons.vn/logo.png",
   "address": {
     "@type": "PostalAddress",
@@ -148,7 +148,6 @@ Thêm structured data cho:
 
 ### Primary Keywords:
 - "công ty xây dựng tphcm"
-- "xây dựng uy tín tphcm"
 - "nhà thầu xây dựng"
 - "thi công xây dựng"
 

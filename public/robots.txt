@@ -1,7 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/
 
 # Sitemap
-Sitemap: https://tinphatcons.vn/sitemap.xml
-
+Sitemap: https://acquytrungnguyen.com/sitemap.xml

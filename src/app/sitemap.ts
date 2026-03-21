@@ -1,33 +1,37 @@
-import { MetadataRoute } from 'next'
- 
+import type { MetadataRoute } from "next";
+import { siteUrl } from "@/config/site";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tinphatcons.vn'
-  
   return [
     {
-      url: baseUrl,
+      url: siteUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${siteUrl}/dich-vu`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: "weekly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/projects`,
+      url: `${siteUrl}/kinh-nghiem-hay`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/posts`,
+      url: `${siteUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.7,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
-  ]
+    {
+      url: `${siteUrl}/about`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+  ];
 }
-
