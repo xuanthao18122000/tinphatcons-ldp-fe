@@ -66,7 +66,9 @@ const BlurImage: React.FC<BlurImageProps> = ({
         priority={isInView}
         placeholder="blur"
         blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGP4////fwAJ+wP9KobjigAAAABJRU5ErkJggg=="
-        className={`transition-all duration-500 ${isLoading && !isInView ? "blur-md" : "blur-0"}`}
+        className={`transition-opacity duration-300 ${
+          isLoading && !isInView && !priority ? "blur-md" : "blur-0"
+        }`}
         onLoad={() => setIsLoading(false)}
         onError={handleError}
         quality={quality}

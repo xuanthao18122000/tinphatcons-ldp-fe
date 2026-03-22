@@ -1,11 +1,24 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import dynamic from "next/dynamic";
 import { ProductCard } from "@/components/website/product/ProductCard";
 import { Breadcrumbs } from "@/components/website/common";
 import { ChevronDown, Filter, X } from "lucide-react";
 import { ICON_SIZE } from "@/lib/icons";
 import { cn } from "@/lib/utils";
+
+const ProductDescriptionBlock = dynamic(
+  () => import("@/components/website/product/ProductDescriptionBlock"),
+  {
+    loading: () => (
+      <div
+        className="mt-6 min-h-[240px] animate-pulse rounded-lg border border-gray-200 bg-gray-50"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 interface Product {
   product_id: number;
@@ -32,6 +45,8 @@ interface CategoryPageContentProps {
     title: string;
     rootSlug: string;
   };
+  /** HTML mô tả danh mục (TextEditor / CMS), hiển thị dưới grid SP — giống `ProductDescriptionBlock` ở PDP */
+  descriptionHtml?: string | null;
   mockProducts?: Product[];
   filterOptions?: {
     voltage?: string[];
@@ -296,6 +311,7 @@ function FilterPanelContent({
 
 export default function CategoryPageContent({
   categoryInfo,
+  descriptionHtml,
   mockProducts = defaultMockProducts,
   filterOptions = defaultFilterOptions,
   breadcrumbItems = [],
@@ -483,6 +499,11 @@ export default function CategoryPageContent({
             </div>
           </div>
         </div>
+
+        <ProductDescriptionBlock
+          descriptionHtml={descriptionHtml}
+          title="Mô tả danh mục"
+        />
 
         {/* Modal Bộ lọc - mobile/tablet */}
         {filterModalOpen && (

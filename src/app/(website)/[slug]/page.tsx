@@ -1,20 +1,30 @@
 import { notFound, redirect } from "next/navigation";
 import { headers } from "next/headers";
+import dynamic from "next/dynamic";
 import { resolveApi, SlugTypeEnum } from "@/lib/api/resolve";
 import CategoryPageContent from "@/components/website/category/CategoryPageContent";
-import {
-  ProductInfo,
-  Breadcrumbs,
-  ProductDetailLeft,
-  ProductDetailRight,
-  ProductSpecs,
-  ProductDescriptionBlock,
-} from "@/components/website";
-import { Category } from "@/lib/api/categories";
+import { Breadcrumbs } from "@/components/website/common/Breadcrumbs";
+import ProductInfo from "@/components/website/product/ProductInfo";
+import { ProductDetailLeft } from "@/components/website/product/ProductDetailLeft";
+import { ProductDetailRight } from "@/components/website/product/ProductDetailRight";
+import { ProductSpecs } from "@/components/website/product/ProductSpecs";
 import { Product } from "@/lib/api/products";
 import { categoriesApi } from "@/lib/api/categories";
 import { productsApi } from "@/lib/api/products";
 import { isCategorySlugNoNavigate } from "@/lib/category-nav";
+
+/** Tách chunk — HTML mô tả dài, không chặn JS phần trên fold */
+const ProductDescriptionBlock = dynamic(
+  () => import("@/components/website/product/ProductDescriptionBlock"),
+  {
+    loading: () => (
+      <div
+        className="mt-6 min-h-[240px] animate-pulse rounded-lg border border-gray-200 bg-gray-50"
+        aria-hidden
+      />
+    ),
+  },
+);
 
 interface SlugPageProps {
   params: Promise<{
@@ -120,6 +130,7 @@ export default async function SlugPage({
             title: category.name,
             rootSlug: category.slug,
           }}
+          descriptionHtml={category.description}
           mockProducts={transformedProducts}
         />
       );

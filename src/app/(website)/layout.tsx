@@ -1,5 +1,6 @@
 import { headers } from "next/headers";
-import { Header, Footer, MobileBottomBar } from '@/components/website'
+import { Header, Footer, MobileBottomBar } from '@/components/website';
+import { FloatingContactFab } from '@/components/website/common/FloatingContactFab';
 import { getCachedCategoriesTree } from "@/lib/categories-for-layout";
 
 export default async function WebsiteLayout({
@@ -18,6 +19,7 @@ export default async function WebsiteLayout({
         {children}
       </div>
       <Footer />
+      <FloatingContactFab />
       <MobileBottomBar />
     </div>
   );

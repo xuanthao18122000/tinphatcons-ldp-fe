@@ -1,8 +1,22 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BlurImage } from "../common";
+
+function ChevronPrev({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M15 18l-6-6 6-6" />
+    </svg>
+  );
+}
+function ChevronNext({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M9 18l6-6-6-6" />
+    </svg>
+  );
+}
 
 interface ProductDetailLeftProps {
   images?: string[];
@@ -43,16 +57,18 @@ export const ProductDetailLeft = ({ images = [], productName = "" }: ProductDeta
         {images.length > 1 && (
           <>
             <button
+              type="button"
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border border-gray-300 rounded-full p-2 shadow-lg z-10 transition-all"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border border-gray-300 rounded-full p-2 shadow-lg z-10 transition-colors"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-700" />
+              <ChevronPrev className="text-gray-700" />
             </button>
             <button
+              type="button"
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border border-gray-300 rounded-full p-2 shadow-lg z-10 transition-all"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white border border-gray-300 rounded-full p-2 shadow-lg z-10 transition-colors"
             >
-              <ChevronRight className="w-5 h-5 text-gray-700" />
+              <ChevronNext className="text-gray-700" />
             </button>
           </>
         )}
@@ -63,6 +79,9 @@ export const ProductDetailLeft = ({ images = [], productName = "" }: ProductDeta
               alt={productName}
               width={400}
               height={400}
+              priority={currentImageIndex === 0}
+              sizes="(max-width: 768px) min(100vw, 28rem), 400px"
+              quality={82}
               className="!relative object-contain max-h-[400px] max-w-full w-auto h-auto"
             />
           </div>
@@ -87,6 +106,8 @@ export const ProductDetailLeft = ({ images = [], productName = "" }: ProductDeta
                 alt={`${productName} - ${index + 1}`}
                 width={80}
                 height={80}
+                sizes="80px"
+                quality={70}
                 className="object-cover w-full h-full"
               />
             </button>

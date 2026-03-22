@@ -23,6 +23,12 @@
     "tinymce": "^7.3.0",
     "xlsx": "^0.18.5"
   },
+  "browserslist": [
+    "chrome >= 92",
+    "firefox >= 90",
+    "safari >= 15.4",
+    "edge >= 92"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Giảm bundle lucide: chỉ import icon dùng tới
+  experimental: {
+    optimizePackageImports: ["lucide-react"],
+  },
   images: {
     remotePatterns: [
       {
@@ -24,6 +28,9 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
   },
   headers: async () => [
     {

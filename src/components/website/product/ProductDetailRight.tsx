@@ -2,8 +2,15 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { X } from "lucide-react";
 import { ProductCommitments } from "./ProductCommitments";
+
+function IconClose({ className }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+      <path d="M18 6L6 18M6 6l12 12" />
+    </svg>
+  );
+}
 
 interface ProductDetailRightProps {
   price: string;
@@ -165,7 +172,7 @@ export const ProductDetailRight = ({
               onClick={handleCloseOrderModal}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"
             >
-              <X className="w-6 h-6" />
+              <IconClose className="w-6 h-6" />
             </button>
             <h2 className="text-xl font-bold text-gray-900 mb-6 pr-8">Để lại thông tin đặt hàng</h2>
             <div className="space-y-4">

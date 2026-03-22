@@ -50,6 +50,7 @@ export default function CategoryPageWithAPI({
   const [products, setProducts] = useState<TransformedProduct[]>([]);
   const [loading, setLoading] = useState(true);
   const [categoryName, setCategoryName] = useState(defaultTitle || categorySlug.toUpperCase());
+  const [descriptionHtml, setDescriptionHtml] = useState<string | null | undefined>(undefined);
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -85,6 +86,7 @@ export default function CategoryPageWithAPI({
         try {
           const category = await categoriesApi.getBySlug(categorySlug);
           setCategoryName(category.name.toUpperCase());
+          setDescriptionHtml(category.description);
         } catch (err) {
           // Keep default name
         }
@@ -116,6 +118,7 @@ export default function CategoryPageWithAPI({
         title: categoryName,
         rootSlug: categorySlug,
       }}
+      descriptionHtml={descriptionHtml}
       mockProducts={products}
       filterOptions={filterOptions}
     />

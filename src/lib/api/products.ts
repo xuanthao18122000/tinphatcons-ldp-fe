@@ -21,6 +21,8 @@ export interface Product {
   stockQuantity: number;
   thumbnailUrl?: string;
   brand?: string;
+  /** battery_capacities.id — filter, không join */
+  batteryCapacityId?: number;
   isFeatured?: boolean;
   isNew?: boolean;
   isBestSeller?: boolean;
@@ -59,6 +61,7 @@ export interface ListProductParams {
   brand?: string;
   status?: string;
   categoryId?: number;
+  batteryCapacityId?: number;
   priceFrom?: number;
   priceTo?: number;
   isFeatured?: boolean;

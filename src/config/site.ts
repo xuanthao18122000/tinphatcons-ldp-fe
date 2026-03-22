@@ -31,6 +31,10 @@ export const contactHotlineTel =
 export const contactEmail =
   process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@acquytrungnguyen.com';
 
+/** Link chat Zalo (vd: https://zalo.me/0868300200) */
+export const zaloChatUrl =
+  process.env.NEXT_PUBLIC_ZALO_URL || 'https://zalo.me/0868300200';
+
 /** Mạng xã hội (sameAs + Footer) */
 export const socialLinks = {
   facebook:
